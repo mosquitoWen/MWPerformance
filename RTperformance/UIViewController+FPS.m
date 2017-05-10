@@ -15,11 +15,17 @@ static BOOL displayFPS = NO;
 
 @implementation UIViewController (FPS)
 
++ (void)load {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self exchangeInstanceMethod:[self class] method1Sel:@selector(viewDidAppear:) method2Sel:@selector(rt_viewDidAppear:)];
+    });
+}
+
 + (void)displayFPS:(BOOL)yesOrNo {
     displayFPS = yesOrNo;
     if (displayFPS) {
         [self displayFPSLabel];
-        [self exchangeInstanceMethod:[self class] method1Sel:@selector(viewDidAppear:) method2Sel:@selector(rt_viewDidAppear:)];
     }
 }
 
@@ -38,7 +44,6 @@ static BOOL displayFPS = NO;
         [window bringSubviewToFront:fpsLabel];
     }
 }
-
 
 + (void)exchangeInstanceMethod:(Class)anClass method1Sel:(SEL)method1Sel method2Sel:(SEL)method2Sel {
     
