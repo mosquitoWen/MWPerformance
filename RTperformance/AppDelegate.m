@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "PerformanceMonitor.h"
+#import "RTPerformanceMonitor.h"
 #import "UIViewController+FPS.h"
 
 @interface AppDelegate ()
@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    PerformanceMonitor *pm = [PerformanceMonitor sharedInstance];
+    RTPerformanceMonitor *pm = [RTPerformanceMonitor sharedInstance];
     [pm startOnlineMonitor];
     
     return YES;
