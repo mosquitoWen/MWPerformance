@@ -42,9 +42,7 @@
 static void runLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info)
 {
     PerformanceMonitor *moniotr = (__bridge PerformanceMonitor*)info;
-    
     moniotr->activity = activity;
-    
     dispatch_semaphore_t semaphore = moniotr->semaphore;
     dispatch_semaphore_signal(semaphore);
 }

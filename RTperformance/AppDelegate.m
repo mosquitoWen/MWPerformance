@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "PerformanceMonitor.h"
+#import "UIViewController+FPS.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,7 @@
     
     PerformanceMonitor *pm = [PerformanceMonitor sharedInstance];
     [pm startMonitor];
+    [UIViewController displayFPS:YES];
     
     return YES;
 }
