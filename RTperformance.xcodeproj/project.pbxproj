@@ -15,7 +15,7 @@
 		2DAE490F1EC2EADC00DB42D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAE490D1EC2EADC00DB42D6 /* LaunchScreen.storyboard */; };
 		2DAE491A1EC2EADC00DB42D6 /* RTperformanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAE49191EC2EADC00DB42D6 /* RTperformanceTests.m */; };
 		2DAE49251EC2EADC00DB42D6 /* RTperformanceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAE49241EC2EADC00DB42D6 /* RTperformanceUITests.m */; };
-		2DAE49341EC2EB3E00DB42D6 /* PerformanceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAE49331EC2EB3E00DB42D6 /* PerformanceMonitor.m */; };
+		2DAE49341EC2EB3E00DB42D6 /* RTPerformanceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAE49331EC2EB3E00DB42D6 /* RTPerformanceMonitor.m */; };
 		2DAE49371EC2EBDE00DB42D6 /* BSBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAE49361EC2EBDE00DB42D6 /* BSBacktraceLogger.m */; };
 		2DAE493D1EC2FC0600DB42D6 /* UIViewController+FPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAE493C1EC2FC0600DB42D6 /* UIViewController+FPS.m */; };
 		2DAE49451EC3070B00DB42D6 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAE49421EC3070B00DB42D6 /* YYWeakProxy.m */; };
@@ -56,8 +56,8 @@
 		2DAE49201EC2EADC00DB42D6 /* RTperformanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RTperformanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DAE49241EC2EADC00DB42D6 /* RTperformanceUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTperformanceUITests.m; sourceTree = "<group>"; };
 		2DAE49261EC2EADC00DB42D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2DAE49321EC2EB3E00DB42D6 /* PerformanceMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformanceMonitor.h; sourceTree = "<group>"; };
-		2DAE49331EC2EB3E00DB42D6 /* PerformanceMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformanceMonitor.m; sourceTree = "<group>"; };
+		2DAE49321EC2EB3E00DB42D6 /* RTPerformanceMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTPerformanceMonitor.h; sourceTree = "<group>"; };
+		2DAE49331EC2EB3E00DB42D6 /* RTPerformanceMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTPerformanceMonitor.m; sourceTree = "<group>"; };
 		2DAE49351EC2EBDE00DB42D6 /* BSBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBacktraceLogger.h; sourceTree = "<group>"; };
 		2DAE49361EC2EBDE00DB42D6 /* BSBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBacktraceLogger.m; sourceTree = "<group>"; };
 		2DAE493B1EC2FC0600DB42D6 /* UIViewController+FPS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+FPS.h"; sourceTree = "<group>"; };
@@ -120,8 +120,8 @@
 				2DAE49031EC2EADC00DB42D6 /* AppDelegate.m */,
 				2DAE49051EC2EADC00DB42D6 /* ViewController.h */,
 				2DAE49061EC2EADC00DB42D6 /* ViewController.m */,
-				2DAE49321EC2EB3E00DB42D6 /* PerformanceMonitor.h */,
-				2DAE49331EC2EB3E00DB42D6 /* PerformanceMonitor.m */,
+				2DAE49321EC2EB3E00DB42D6 /* RTPerformanceMonitor.h */,
+				2DAE49331EC2EB3E00DB42D6 /* RTPerformanceMonitor.m */,
 				2DAE493B1EC2FC0600DB42D6 /* UIViewController+FPS.h */,
 				2DAE493C1EC2FC0600DB42D6 /* UIViewController+FPS.m */,
 				2DAE49411EC3070B00DB42D6 /* YYWeakProxy.h */,
@@ -299,7 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DAE49071EC2EADC00DB42D6 /* ViewController.m in Sources */,
-				2DAE49341EC2EB3E00DB42D6 /* PerformanceMonitor.m in Sources */,
+				2DAE49341EC2EB3E00DB42D6 /* RTPerformanceMonitor.m in Sources */,
 				2DAE49041EC2EADC00DB42D6 /* AppDelegate.m in Sources */,
 				2DAE49011EC2EADC00DB42D6 /* main.m in Sources */,
 				2DAE49451EC3070B00DB42D6 /* YYWeakProxy.m in Sources */,
@@ -539,6 +539,7 @@
 				2DAE492B1EC2EADC00DB42D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DAE492C1EC2EADC00DB42D6 /* Build configuration list for PBXNativeTarget "RTperformanceTests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +548,7 @@
 				2DAE492E1EC2EADC00DB42D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DAE492F1EC2EADC00DB42D6 /* Build configuration list for PBXNativeTarget "RTperformanceUITests" */ = {
 			isa = XCConfigurationList;
@@ -555,6 +557,7 @@
 				2DAE49311EC2EADC00DB42D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

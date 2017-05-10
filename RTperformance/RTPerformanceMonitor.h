@@ -8,14 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PerformanceMonitor : NSObject
+@interface RTPerformanceMonitor : NSObject
 
 + (instancetype)sharedInstance;
 
 // 阀时(单位ms)
 @property (nonatomic, assign) NSInteger gateTime;
 
-- (void)startMonitor;
-- (void)stopMonitor;
+- (void)startOnlineMonitor;
+- (void)stopOnlineMonitor;
+
+- (void)startOfflineMonitor;
 
 @end

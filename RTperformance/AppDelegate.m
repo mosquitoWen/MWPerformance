@@ -21,8 +21,7 @@
     // Override point for customization after application launch.
     
     PerformanceMonitor *pm = [PerformanceMonitor sharedInstance];
-    [pm startMonitor];
-    [UIViewController displayFPS:YES];
+    [pm startOnlineMonitor];
     
     return YES;
 }

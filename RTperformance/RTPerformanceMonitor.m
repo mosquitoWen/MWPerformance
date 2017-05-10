@@ -6,10 +6,11 @@
 //  Copyright © 2017年 Gwen. All rights reserved.
 //
 
-#import "PerformanceMonitor.h"
+#import "RTPerformanceMonitor.h"
 #import "BSBacktraceLogger.h"
+#import "UIViewController+FPS.h"
 
-@interface PerformanceMonitor ()
+@interface RTPerformanceMonitor ()
 {
     int timeoutCount;
     CFRunLoopObserverRef observer;
@@ -20,7 +21,7 @@
 }
 @end
 
-@implementation PerformanceMonitor
+@implementation RTPerformanceMonitor
 
 + (instancetype)sharedInstance
 {
@@ -41,7 +42,7 @@
 
 static void runLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info)
 {
-    PerformanceMonitor *moniotr = (__bridge PerformanceMonitor*)info;
+    RTPerformanceMonitor *moniotr = (__bridge RTPerformanceMonitor*)info;
     moniotr->activity = activity;
     dispatch_semaphore_t semaphore = moniotr->semaphore;
     dispatch_semaphore_signal(semaphore);
@@ -53,7 +54,7 @@ static void runLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActi
     }
 }
 
-- (void)stopMonitor
+- (void)stopOnlineMonitor
 {
     if (!observer)
         return;
@@ -62,7 +63,7 @@ static void runLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActi
     observer = NULL;
 }
 
-- (void)startMonitor
+- (void)startOnlineMonitor
 {
     if (observer)
         return;
@@ -112,6 +113,11 @@ static void runLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActi
         }// end while
     });
 }
+
+- (void)startOfflineMonitor {
+    [UIViewController displayFPS:YES];
+}
+
 
 
 
