@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "RTPerformanceMonitor.h"
 #import "UIViewController+FPS.h"
+#import "UIViewController+LoadingTime.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +23,7 @@
     
     RTPerformanceMonitor *pm = [RTPerformanceMonitor sharedInstance];
     [pm startOnlineMonitor];
+    [UIViewController recordViewLoadTime:YES];
     
     return YES;
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D32012C1EC58ADD005ED29C /* UIViewController+LoadingTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D32012B1EC58ADD005ED29C /* UIViewController+LoadingTime.m */; };
 		2DAE49011EC2EADC00DB42D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAE49001EC2EADC00DB42D6 /* main.m */; };
 		2DAE49041EC2EADC00DB42D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAE49031EC2EADC00DB42D6 /* AppDelegate.m */; };
 		2DAE49071EC2EADC00DB42D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAE49061EC2EADC00DB42D6 /* ViewController.m */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D32012A1EC58ADD005ED29C /* UIViewController+LoadingTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LoadingTime.h"; sourceTree = "<group>"; };
+		2D32012B1EC58ADD005ED29C /* UIViewController+LoadingTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LoadingTime.m"; sourceTree = "<group>"; };
 		2DAE48FC1EC2EADC00DB42D6 /* RTperformance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTperformance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DAE49001EC2EADC00DB42D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2DAE49021EC2EADC00DB42D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -93,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D3201291EC58AAD005ED29C /* loadView */ = {
+			isa = PBXGroup;
+			children = (
+				2D32012A1EC58ADD005ED29C /* UIViewController+LoadingTime.h */,
+				2D32012B1EC58ADD005ED29C /* UIViewController+LoadingTime.m */,
+			);
+			name = loadView;
+			sourceTree = "<group>";
+		};
 		2DAE48F31EC2EADC00DB42D6 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +142,7 @@
 				2DAE49441EC3070B00DB42D6 /* YYFPSLabel.m */,
 				2DAE49351EC2EBDE00DB42D6 /* BSBacktraceLogger.h */,
 				2DAE49361EC2EBDE00DB42D6 /* BSBacktraceLogger.m */,
+				2D3201291EC58AAD005ED29C /* loadView */,
 				2DAE49081EC2EADC00DB42D6 /* Main.storyboard */,
 				2DAE490B1EC2EADC00DB42D6 /* Assets.xcassets */,
 				2DAE490D1EC2EADC00DB42D6 /* LaunchScreen.storyboard */,
@@ -304,6 +317,7 @@
 				2DAE49011EC2EADC00DB42D6 /* main.m in Sources */,
 				2DAE49451EC3070B00DB42D6 /* YYWeakProxy.m in Sources */,
 				2DAE49461EC3070B00DB42D6 /* YYFPSLabel.m in Sources */,
+				2D32012C1EC58ADD005ED29C /* UIViewController+LoadingTime.m in Sources */,
 				2DAE49371EC2EBDE00DB42D6 /* BSBacktraceLogger.m in Sources */,
 				2DAE493D1EC2FC0600DB42D6 /* UIViewController+FPS.m in Sources */,
 			);
